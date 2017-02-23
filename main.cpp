@@ -24,7 +24,7 @@ int main()
 
     /*Creaţi un program care determină valoarea maximă
     dintr-un șir de valori numerice*/
-
+    /*
     int a[20], nr, i, maxim;
     cout << "Numarul de elemente din sirul a (maxim 20)";
     cin >> nr;
@@ -39,7 +39,28 @@ int main()
     }
     cout << "Elementul maxim al sirului a este: " << maxim << endl;
     return 0;
+    */
 
+    /*Creaţi un program care realizează inversarea ordinii
+    elementelor dintr-un șir de valori numerice*/
+
+    int a[20], nr, i, j, aux;
+    cout << "Numarul de elemente din sirul a (maxim 20)";
+    cin >> nr;
+    for (i = 0; i < nr; i++){
+        cout << "a[" << i << "] = ";
+        cin >> a[i];
+    }
+    for (i = 0, j = nr - 1; i < j; i++, j--){
+        aux = a[i];
+        a[i] = a[j];
+        a[j] = aux;
+    }
+    for (i = 0; i < nr; i++){
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    return 0;
 
 
 }
