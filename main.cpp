@@ -66,7 +66,7 @@ int main()
     /*Creaţi un program care decalează valorile dintr-un șir numeric,
     spre stânga, cu o poziție. Primul element din șirul inițial nu se
     pierde ci se adaugă la sfârșitul șirului*/
-
+    /*
     int a[20], nr, i, aux;
     cout << "Numarul de elemente din sirul a (maxim 20)";
     cin >> nr;
@@ -84,5 +84,29 @@ int main()
     }
     cout << endl;
     return 0;
+    */
 
+    /*Creaţi un program a cărui execuție face ca elementul maxim
+     dintr-un șir de valori numerice să ajungă pe ultima poziție
+     a șirului*/
+
+    int a[20], nr, i, aux;
+    cout << "Numarul de elemente din sirul a (maxim 20)";
+    cin >> nr;
+    for (i = 0; i < nr; i++){
+        cout << "a[" << i << "] = ";
+        cin >> a[i];
+    }
+    for (i = 0; i < nr -1; i++){
+        if(a[i] > a[i + 1]){
+            aux = a[i];
+            a[i] = a[i + 1];
+            a[i + 1] = aux;
+        }
+    }
+    for (i = 0; i < nr; i++){
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    return 0;
 }
