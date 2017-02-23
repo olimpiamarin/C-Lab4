@@ -43,7 +43,7 @@ int main()
 
     /*Creaţi un program care realizează inversarea ordinii
     elementelor dintr-un șir de valori numerice*/
-
+    /*
     int a[20], nr, i, j, aux;
     cout << "Numarul de elemente din sirul a (maxim 20)";
     cin >> nr;
@@ -61,6 +61,28 @@ int main()
     }
     cout << endl;
     return 0;
+    */
 
+    /*Creaţi un program care decalează valorile dintr-un șir numeric,
+    spre stânga, cu o poziție. Primul element din șirul inițial nu se
+    pierde ci se adaugă la sfârșitul șirului*/
+
+    int a[20], nr, i, aux;
+    cout << "Numarul de elemente din sirul a (maxim 20)";
+    cin >> nr;
+    for (i = 0; i < nr; i++){
+        cout << "a[" << i << "] = ";
+        cin >> a[i];
+    }
+    aux = a[0];
+    for (i = 0; i < nr - 1; i++)
+        a[i] = a[i + 1];
+    a[nr - 1] = aux;
+
+    for (i = 0; i < nr; i++){
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    return 0;
 
 }
